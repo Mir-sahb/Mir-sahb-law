@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mir Sahb Law | Trusted Legal Counsel</title>
+    <meta name="description" content="Mir Sahb Law provides trusted legal representation in business law, family law, civil disputes, and advisory services." />
+    <style>
+      :root {
+        --navy: #0f172a;
+        --navy-soft: #1e293b;
+        --gold: #caa35a;
+        --gold-soft: #f8f0df;
+        --ivory: #f8fafc;
+        --text: #1f2937;
+        --muted: #667085;
+        --white: #ffffff;
+        --line: #e5e7eb;
+        --shadow: 0 20px 45px rgba(15,23,42,.08);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f9fafb;
+        color: var(--text);
+        line-height: 1.6;
+      }
+      img { max-width: 100%; display: block; }
+      a { text-decoration: none; color: inherit; }
+      .container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+      .topbar {
+        background: var(--navy);
+        color: var(--white);
+        font-size: 0.85rem;
+        padding: 10px 0;
+      }
+      .topbar .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+      }
+      header {
+        background: rgba(15, 23, 42, 0.96);
+        position: sticky; top: 0; z-index: 30;
+        backdrop-filter: blur(8px);
+      }
+      .nav {
+        display: flex; align-items: center; justify-content: space-between;
+        min-height: 78px;
+      }
+      .brand {
+        display: flex; align-items: center; gap: 12px; font-weight: 700; color: var(--white);
+      }
+      .brand-mark {
+        width: 38px; height: 38px; border-radius: 50%;
+        display: grid; place-items: center; background: linear-gradient(135deg, var(--gold), #c78c2b);
+        color: var(--navy); font-weight: 800;
+      }
+      .nav-links {
+        display: flex; align-items: center; gap: 26px; color: rgba(255,255,255,.82);
+        font-size: 0.95rem;
+      }
+      .nav-cta {
+        background: var(--gold); color: var(--navy); padding: 12px 22px; border-radius: 999px; font-weight: 700;
+      }
+      .hero {
+        background: linear-gradient(135deg, rgba(15,23,42,.98), rgba(30,41,59,.95)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+        color: var(--white);
+        padding: 88px 0 70px;
+      }
+      .hero-grid {
+        display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center;
+      }
+      .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: .72rem; color: #dfeaf7; }
+      h1 {
+        font-size: clamp(2.6rem, 5vw, 5rem);
+        line-height: 1.06; margin: 14px 0 18px;
+      }
+      .lead {
+        font-size: 1.1rem; color: rgba(255,255,255,.8); max-width: 640px;
+      }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 26px; }
+      .btn {
+        display: inline-block; padding: 14px 26px; border-radius: 999px; font-weight: 700; transition: .2s ease;
+      }
+      .btn-primary { background: var(--gold); color: var(--navy); }
+      .btn-secondary { background: rgba(255,255,255,.08); color: var(--white); border: 1px solid rgba(255,255,255,.25); }
+      .btn:hover { transform: translateY(-1px); }
+      .stat-box {
+        background: rgba(255,255,255,.08);
+        border: 1px solid rgba(255,255,255,.12);
+        border-radius: 24px; padding: 28px;
+        box-shadow: var(--shadow);
+      }
+      .stat-grid {
+        display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 16px;
+      }
+      .stat-item {
+        background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.06); border-radius: 18px; padding: 18px;
+      }
+      .stat-item strong { font-size: 2rem; display: block; }
+      section { padding: 90px 0; }
+      .section-header { text-align: center; margin-bottom: 36px; }
+      .section-header h2 { font-size: clamp(2rem, 3vw, 2.8rem); margin: 8px 0 12px; }
+      .section-header p { max-width: 720px; margin: 0 auto; color: var(--muted); }
+      .practice-grid, .feature-grid, .stats-grid, .testimonials-grid {
+        display: grid; gap: 24px;
+      }
+      .practice-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+      .card {
+        background: var(--white); border: 1px solid var(--line); border-radius: 22px; box-shadow: var(--shadow); overflow: hidden;
+      }
+      .card-body { padding: 26px; }
+      .practice-card .icon { width: 54px; height: 54px; border-radius: 15px; display: grid; place-items: center; background: var(--gold-soft); color: var(--navy); font-size: 1.4rem; font-weight: 700; }
+      .practice-card h3 { margin: 18px 0 10px; font-size: 1.3rem; }
+      .practice-card p { margin: 0; color: var(--muted); }
+      .about {
+        background: white;
+      }
+      .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
+      .about-box {
+        background: var(--ivory); border: 1px solid var(--line); border-radius: 26px; padding: 28px; box-shadow: var(--shadow);
+      }
+      .check-list { list-style: none; padding: 0; margin: 20px 0 0; }
+      .check-list li { position: relative; padding-left: 26px; margin-bottom: 12px; }
+      .check-list li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+      .feature-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+      .feature-card { background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 26px; box-shadow: var(--shadow); }
+      .feature-card h3 { margin-top: 0; }
+      .stats-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+      .stat-card {
+        background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 24px; text-align: center; box-shadow: var(--shadow);
+      }
+      .stat-card strong { font-size: 2rem; display: block; color: var(--navy); }
+      .testimonials-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+      .quote { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 24px; box-shadow: var(--shadow); }
+      .quote p { color: var(--muted); }
+      .quote strong { display: block; margin-top: 18px; }
+      .cta-banner {
+        background: linear-gradient(135deg, var(--gold-soft), #fff7ea);
+        border-radius: 30px; padding: 42px; display: flex; justify-content: space-between; align-items: center; gap: 20px; box-shadow: var(--shadow);
+      }
+      footer {
+        background: var(--navy);
+        color: rgba(255,255,255,.8);
+        padding: 28px 0;
+      }
+      .footer-wrap { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+      @media (max-width: 900px) {
+        .hero-grid, .about-grid, .practice-grid, .feature-grid, .stats-grid, .testimonials-grid, .cta-banner { grid-template-columns: 1fr; display: grid; }
+        .nav-links { display: none; }
+        .cta-banner { text-align: center; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container wrap">
+        <span>Open Monday to Saturday • 9:00 AM - 6:00 PM</span>
+        <span>Call Now: +1 (555) 240-9876</span>
+      </div>
+    </div>
+
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <div class="brand-mark">M</div>
+          <span>Mir Sahb Law</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#practice">Practice Areas</a>
+          <a href="#results">Results</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact" class="nav-cta">Book Consultation</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">Experienced legal representation</div>
+            <h1>Strong advocacy. Trusted guidance.</h1>
+            <p class="lead">We help individuals, families, and businesses navigate legal challenges with clarity, confidence, and decisive action.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Free Consultation</a>
+              <a class="btn btn-secondary" href="#practice">Explore Services</a>
+            </div>
+          </div>
+
+          <div class="stat-box">
+            <div class="eyebrow">Why clients choose us</div>
+            <div class="stat-grid">
+              <div class="stat-item">
+                <strong>18+</strong>
+                <span>Years of practice</span>
+              </div>
+              <div class="stat-item">
+                <strong>950+</strong>
+                <span>Cases resolved</span>
+              </div>
+              <div class="stat-item">
+                <strong>96%</strong>
+                <span>Client satisfaction</span>
+              </div>
+              <div class="stat-item">
+                <strong>24/7</strong>
+                <span>Response support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="practice">
+        <div class="container">
+          <div class="section-header">
+            <div class="eyebrow" style="color: var(--gold);">Practice areas</div>
+            <h2>Focused legal support for every stage</h2>
+            <p>From everyday legal issues to high-stakes disputes, our team delivers practical advice and powerful representation.</p>
+          </div>
+
+          <div class="practice-grid">
+            <article class="card practice-card">
+              <div class="card-body">
+                <div class="icon">⚖</div>
+                <h3>Business Law</h3>
+                <p>Contracts, compliance, entity formation, governance, and advisory services for growing businesses.</p>
+              </div>
+            </article>
+            <article class="card practice-card">
+              <div class="card-body">
+                <div class="icon">👨‍👩‍👧‍👦</div>
+                <h3>Family Law</h3>
+                <p>Support for divorce, custody, support matters, and sensitive family conflict resolution.</p>
+              </div>
+            </article>
+            <article class="card practice-card">
+              <div class="card-body">
+                <div class="icon">🏛</div>
+                <h3>Civil Litigation</h3>
+                <p>Strategic representation in disputes involving property, contracts, and civil claims.</p>
+              </div>
+            </article>
+            <article class="card practice-card">
+              <div class="card-body">
+                <div class="icon">🛡</div>
+                <h3>Risk Advisory</h3>
+                <p>Preventative legal guidance to reduce exposure, improve compliance, and protect your interests.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container about-grid">
+          <div>
+            <div class="eyebrow" style="color: var(--gold);">About us</div>
+            <h2>Client-focused legal counsel with a practical edge</h2>
+            <p style="color: var(--muted);">At Mir Sahb Law, we combine legal precision with a human approach. We listen closely, communicate clearly, and develop solutions tailored to your goals and circumstances.</p>
+            <ul class="check-list">
+              <li>Clear strategy and transparent legal advice</li>
+              <li>Strong courtroom preparation and negotiation</li>
+              <li>Responsive communication from start to finish</li>
+              <li>Commitment to protecting your long-term interests</li>
+            </ul>
+          </div>
+
+          <div class="about-box">
+            <h3 style="margin-top:0;">Our promise</h3>
+            <p style="color: var(--muted);">We approach every matter with careful analysis, personal attention, and a strong commitment to results that matter.</p>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <strong>2000+</strong>
+                <span>Client meetings</span>
+              </div>
+              <div class="stat-card">
+                <strong>150+</strong>
+                <span>Business clients</span>
+              </div>
+              <div class="stat-card">
+                <strong>24h</strong>
+                <span>Initial response</span>
+              </div>
+              <div class="stat-card">
+                <strong>4.9/5</strong>
+                <span>Review rating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="results">
+        <div class="container">
+          <div class="section-header">
+            <div class="eyebrow" style="color: var(--gold);">Why clients trust us</div>
+            <h2>Results built on clarity and commitment</h2>
+          </div>
+
+          <div class="feature-grid">
+            <div class="feature-card">
+              <h3>Personalized attention</h3>
+              <p>We solve your legal issue with direct communication and practical advice tailored to your needs.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Strategic advocacy</h3>
+              <p>Every decision is guided by careful preparation, legal risk analysis, and negotiation strategy.</p>
+            </div>
+            <div class="feature-card">
+              <h3>Dependable service</h3>
+              <p>We prioritize responsiveness, thoroughness, and consistency throughout every matter.</p>
+            </div>
+          </div>
+
+          <div class="testimonials-grid" style="margin-top: 26px;">
+            <div class="quote">
+              <p>“The team took time to understand our situation and guided us through a difficult dispute with confidence and professionalism.”</p>
+              <strong>— Business Client</strong>
+            </div>
+            <div class="quote">
+              <p>“They are thoughtful, responsive, and extremely knowledgeable. We felt supported at every stage.”</p>
+              <strong>— Family Law Client</strong>
+            </div>
+            <div class="quote">
+              <p>“Their advice was clear, strategic, and practical. They resolved our matter efficiently without unnecessary stress.”</p>
+              <strong>— Civil Litigation Client</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <div class="cta-banner">
+            <div>
+              <div class="eyebrow" style="color: #7c5f2e;">Book a consultation</div>
+              <h2 style="margin:10px 0 0;">Talk to a lawyer who listens.</h2>
+            </div>
+            <div style="display:flex; gap:14px; flex-wrap:wrap;">
+              <a href="mailto:hello@mirsahblaw.com" class="btn btn-primary">hello@mirsahblaw.com</a>
+              <a href="tel:+15552409876" class="btn btn-secondary" style="background:#fff; color: var(--navy); border: 1px solid #d9dbe0;">+1 (555) 240-9876</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-wrap">
+        <div>© 2026 Mir Sahb Law.</div>
+        <div>Legal Counsel • Advisory • Representation</div>
+      </div>
+    </footer>
+  </body>
+</html>
